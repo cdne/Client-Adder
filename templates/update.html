@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome To Task Worker{% endblock %}
+
+{% block content %}
+
+    <h1 style="text-align: center;padding:40px; ">Update Client Details </h1>
+    <form action="/update/{{ client.id }}" method="post" >
+        <div class="row">
+            <div class="col">
+                <label for="first-name">First Name:</label>
+                <input type="text" class="form-control" id="first-name" name="first-name" required value="{{ client.first_name }}">
+             </div>
+            <div class="col">
+                <label for="last-name">Last Name:</label>
+                <input type="text" class="form-control" id="last-name" name="last-name" value="{{ client.last_name }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required value="{{ client.email }}">
+             </div>
+            <div class="col">
+                <label for="city">City:</label>
+                <input type="text" class="form-control" id="city" name="city" value="{{ client.city }}">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 20px;">
+        <button id="btn-submit" type="submit" class="btn btn-primary" style="position: absolute; left: 48%;">Update</button>
+        </div>
+    </form>
+{% endblock %}
