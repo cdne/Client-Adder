@@ -1,4 +1,4 @@
-#Client-Adder
+# Client Adder
 
 You can add clients first name, last name, email and city in a database. Also you can delete and update the details.
 
